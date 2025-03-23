@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bordelle Noir - Numero Casuale</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #ffffffcc;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #aaaaaa;
+    }
+
+    #number {
+      font-size: 6rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #ff4d6d;
+    }
+
+    button {
+      background-color: #ff4d6d;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e0435f;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 0.9rem;
+      }
+      #number {
+        font-size: 4rem;
+      }
+      button {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bordelle Noir Edition</h1>
+  <h2>Obbligo o Verità - Generatore di Pagine</h2>
+  <div id="number">—</div>
+  <button onclick="generateNumber()">Genera Numero</button>
+
+  <script>
+    function generateNumber() {
+      const min = 4;
+      const max = 64;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById("number").textContent = randomNumber;
+    }
+  </script>
+</body>
+</html>
